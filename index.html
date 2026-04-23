@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calmivo | كالمیفو فيتامين B6</title>
+    <!-- Modern Typography: Cairo & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- 3D Animated Background Elements for Hero -->
+    <div class="animated-bg-container">
+      <div class="ambient-glow" id="ambient-glow"></div>
+      <div class="floating-orb orb-1"></div>
+      <div class="floating-orb orb-2"></div>
+      <div class="grid-floor"></div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="premium-nav">
+      <div class="logo">CALMIVO<span>.</span></div>
+      <div class="nav-links">
+        <a href="#discover">اكتشف</a>
+        <a href="#benefits">المنافع</a>
+        <a href="#shop">المنتجات</a>
+      </div>
+      <button class="btn-primary" id="buy-btn">اطلب الآن</button>
+    </nav>
+
+    <!-- Hero / Gallery Section -->
+    <main class="hero">
+      <div class="hero-content">
+        <h1 class="stagger-text">حيوية نقية، <br/><span class="dynamic-text">ترتقي بك.</span></h1>
+        <p class="stagger-text subtext">اكتشف التوليفة المثالية من فيتامين B6، المصممة خصيصاً لمنحك هدوءاً فائقاً وطاقة مركزة لمواجهة ضغوطات يومك.</p>
+        
+        <div class="controls stagger-text">
+          <button class="nav-control" id="prev-btn">
+             <!-- Right arrow (prev in RTL) -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <span class="indicator">01 / 06</span>
+          <button class="nav-control" id="next-btn">
+            <!-- Left arrow (next in RTL) -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="gallery-container">
+        <!-- The images will be injected and manipulated via JS -->
+        <div class="carousel" id="carousel">
+          <div class="slide active">
+            <img crossorigin="anonymous" src="./Copie de 1.jpeg" alt="Calmivo Product 1" />
+          </div>
+          <div class="slide next">
+            <img crossorigin="anonymous" src="./Copie de 2.jpeg" alt="Calmivo Product 2" />
+          </div>
+          <div class="slide">
+            <img crossorigin="anonymous" src="./Copie de 3.jpeg" alt="Calmivo Product 3" />
+          </div>
+          <div class="slide">
+            <img crossorigin="anonymous" src="./Copie de 4.jpeg" alt="Calmivo Product 4" />
+          </div>
+          <div class="slide">
+            <img crossorigin="anonymous" src="./Copie de 5.jpeg" alt="Calmivo Product 5" />
+          </div>
+          <div class="slide prev">
+            <img crossorigin="anonymous" src="./Copie de 6.jpeg" alt="Calmivo Product 6" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Video Story Section -->
+    <article class="video-story-section" id="discover">
+      <div class="video-content stagger-video-text">
+        <h2>اكتشف رحلة <span class="dynamic-text">التوازن الداخلي</span></h2>
+        <p>تركيبة متكاملة لدعم الجهاز العصبي والمساعدة على الاسترخاء، صممت بعناية لتحسين جودة يومك.</p>
+      </div>
+      <div class="video-container" id="video-container">
+        <video id="story-video" class="story-video" playsinline>
+          <source src="./83924fe8-a524-4c65-840c-27f6e35a284e.mp4" type="video/mp4" />
+        </video>
+        <div class="play-overlay" id="play-overlay">
+           <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <button class="fullscreen-btn" id="fullscreen-btn" title="توسيع الشاشة">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        </button>
+      </div>
+    </article>
+
+    <!-- Pricing / Shop Section -->
+    <section class="pricing-section" id="shop">
+      <div class="pricing-header stagger-shop">
+        <h2>اطلب الآن بخصومات خاصة 🇲🇦</h2>
+        <p>الدفع عند الاستلام والتوصيل مجاني لجميع مدن المغرب</p>
+      </div>
+      
+      <div class="pricing-cards stagger-shop">
+        <!-- Package 1 -->
+        <div class="card basic-card">
+          <div class="card-image">
+            <img src="./Copie de 1.jpeg" alt="1x Calmivo" />
+          </div>
+          <div class="card-details">
+            <h3>علبة واحدة (1x)</h3>
+            <p>لشهر واحد من الراحة</p>
+          </div>
+          <div class="card-price">
+            <span class="price">219.00 dh</span>
+          </div>
+        </div>
+
+        <!-- Package 2 -->
+        <div class="card highlight-card">
+          <div class="card-image">
+            <img src="./Copie de 1.jpeg" alt="2x Calmivo" />
+          </div>
+          <div class="card-details">
+            <h3>علبتين (2x)</h3>
+            <p>لشهرين من الراحة</p>
+            <span class="badge">توفير 35%</span>
+          </div>
+          <div class="card-price">
+            <span class="old-price">350.00 dh</span>
+            <span class="price">269.00 dh</span>
+          </div>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="card premium-card">
+          <div class="card-image">
+            <img src="./Copie de 1.jpeg" alt="3x Calmivo" />
+          </div>
+          <div class="card-details">
+            <h3>ثلاث علب (3x)</h3>
+            <p>لثلاثة أشهر من الراحة</p>
+            <span class="badge best-seller">الأكثر طلباً</span>
+          </div>
+          <div class="card-price">
+             <span class="old-price">450.00 dh</span>
+             <span class="price">319.00 dh</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

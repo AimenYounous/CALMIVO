@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&family=Outfit:wght@400;600;800&display=swap');
+
+:root {
+  --dynamic-color: 255, 255, 255;
+  --bg-dark: #07070a;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --text-main: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --transition-speed: 0.8s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.logo {
+  font-family: 'Outfit', sans-serif;
+  direction: ltr;
+}
+
+/* 3D Animated Background - Replaces Video in Hero */
+.animated-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  height: 70vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--dynamic-color), 0.25) 0%, transparent 70%);
+  filter: blur(100px);
+  z-index: -1;
+  transition: background var(--transition-speed) ease;
+  pointer-events: none;
+  animation: pulseGlow 8s infinite alternate ease-in-out;
+}
+
+.floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(var(--dynamic-color), 0.8), transparent);
+  filter: blur(40px);
+  opacity: 0.5;
+  transition: background var(--transition-speed) ease;
+  animation: float 20s infinite ease-in-out;
+}
+
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  top: 10%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  width: 300px;
+  height: 300px;
+  bottom: 20%;
+  left: 5%;
+  animation-delay: -10s;
+  background: linear-gradient(135deg, transparent, rgba(var(--dynamic-color), 0.6));
+}
+
+.grid-floor {
+  position: absolute;
+  bottom: -20vh;
+  left: -50vw;
+  width: 200vw;
+  height: 100vh;
+  background-image: 
+    linear-gradient(rgba(var(--dynamic-color), 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--dynamic-color), 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  transform: rotateX(75deg);
+  transform-origin: top;
+  opacity: 0.3;
+  transition: background-image var(--transition-speed) ease;
+  mask-image: linear-gradient(to top, transparent, black);
+  -webkit-mask-image: linear-gradient(to top, transparent, black);
+}
+
+@keyframes pulseGlow {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+  100% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(50px, -50px) rotate(15deg); }
+  50% { transform: translate(-20px, 30px) rotate(-5deg); }
+  75% { transform: translate(-60px, -20px) rotate(20deg); }
+}
+
+/* Nav */
+.premium-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(7, 7, 10, 0.4); /* Subtle dark glass */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: rgb(var(--dynamic-color));
+  transition: color var(--transition-speed) ease;
+}
+
+.nav-links a {
+  color: var(--text-main);
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: rgb(var(--dynamic-color));
+}
+
+.btn-primary {
+  background: rgba(var(--dynamic-color), 0.1);
+  border: 1px solid rgba(var(--dynamic-color), 0.5);
+  color: var(--text-main);
+  padding: 0.75rem 2.5rem;
+  border-radius: 30px;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(var(--dynamic-color), 0);
+}
+
+.btn-primary:hover {
+  background: rgba(var(--dynamic-color), 0.2);
+  box-shadow: 0 0 25px rgba(var(--dynamic-color), 0.4);
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  height: 100vh;
+  padding: 100px 5% 0; /* Clear the fixed nav */
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 500px;
+  z-index: 10;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  font-weight: 800;
+}
+
+.dynamic-text {
+  color: rgb(var(--dynamic-color));
+  transition: color var(--transition-speed) ease;
+  text-shadow: 0 0 40px rgba(var(--dynamic-color), 0.4);
+}
+
+.subtext {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-control {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.nav-control:hover {
+  background: rgba(var(--dynamic-color), 0.2);
+  border-color: rgba(var(--dynamic-color), 0.5);
+  transform: scale(1.1);
+}
+
+.indicator {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  direction: ltr; /* keep numbers LTR */
+}
+
+/* 3D Carousel */
+.gallery-container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.carousel {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  right: 0; /* Changed from left for RTL */
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5), 0 0 0 1px var(--glass-border);
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.8s ease;
+  opacity: 0;
+  transform: translateZ(-500px) translateX(0); /* Standard fallback */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Slide States RTL Adjustments */
+/* In RTL, positive translateX moves left, negative moves right. 
+   We want the 'next' slide to appear to the left of the active one visually logically, 
+   but it's a 3D carousel. Let's keep visually striking 3D offset. */
+.slide.active {
+  opacity: 1;
+  transform: translateZ(0) translateX(0);
+  z-index: 3;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 40px rgba(var(--dynamic-color), 0.3), 0 0 0 1px rgba(var(--dynamic-color), 0.3);
+}
+
+.slide.next {
+  opacity: 0.6;
+  transform: translateZ(-200px) translateX(-40%) rotateY(15deg);
+  z-index: 2;
+  filter: brightness(0.5);
+}
+
+.slide.prev {
+  opacity: 0.6;
+  transform: translateZ(-200px) translateX(40%) rotateY(-15deg);
+  z-index: 2;
+  filter: brightness(0.5);
+}
+
+/* Video Story Section Below Hero */
+.video-story-section {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row; /* Text on right, video on left in RTL */
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 8%;
+  gap: 5%;
+}
+
+.video-content {
+  position: relative;
+  z-index: 2;
+  text-align: right;
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.video-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.video-content p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.video-container {
+  position: relative;
+  flex: none;
+  width: 400px;
+  max-width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+  cursor: pointer;
+  border: 1px solid var(--glass-border);
+}
+
+.story-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: filter 0.3s ease;
+  filter: brightness(0.7);
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(var(--dynamic-color), 0.3);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  box-shadow: 0 0 30px rgba(var(--dynamic-color), 0.4);
+}
+
+.video-container:hover .play-overlay {
+  background: rgba(var(--dynamic-color), 0.6);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.fullscreen-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  z-index: 10;
+  opacity: 0;
+}
+
+.video-container:hover .fullscreen-btn {
+  opacity: 1;
+}
+
+.fullscreen-btn:hover {
+  background: rgba(var(--dynamic-color), 0.8);
+  transform: scale(1.1);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+  }
+  .hero-content {
+    margin-bottom: 3rem;
+  }
+  .controls {
+    justify-content: center;
+  }
+  .nav-links {
+    display: none;
+  }
+  .carousel {
+    width: 300px;
+    height: 380px;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .video-story-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .video-content {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .video-content h2 {
+    font-size: 2.5rem;
+  }
+  .video-content p {
+    font-size: 1.2rem;
+  }
+  .video-container {
+    max-width: 100%;
+  }
+}
+
+/* Pricing / Shop Section */
+.pricing-section {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 5%;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pricing-header h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.pricing-header p {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+}
+
+.pricing-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 700px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #111111 !important; /* Premium Dark Background */
+  border: 1px solid rgba(30, 113, 104, 0.5) !important; /* Subtle Green Border */
+  border-radius: 12px !important;
+  padding: 1.5rem 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #ffffff !important; /* Pure White Text */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #268f84 !important; /* Brighter Green on hover */
+  box-shadow: 0 10px 30px rgba(30, 113, 104, 0.3);
+}
+
+.card-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 1.5rem;
+  flex-shrink: 0;
+  background: white; /* Keep white for the product image container to pop */
+  padding: 5px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-details {
+  flex: 1;
+  text-align: right;
+}
+
+.card-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.2rem;
+  color: #ffffff !important;
+  font-weight: 800;
+}
+
+.card-details p {
+  color: #aaaaaa !important; /* Muted light grey */
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #1e7168 !important; /* Dawtox Green */
+  color: #ffffff !important;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+
+.best-seller {
+  background-color: #cc8800 !important; /* Gold for Best Seller */
+}
+
+.card-price {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #666666 !important;
+  font-size: 1.1rem;
+}
+
+.price {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #ffffff !important;
+}
+
+.highlight-card {
+  /* It already shares the card styles */
+}
+
+.premium-card {
+  /* It already shares the card styles */
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .card-image {
+    margin-left: 0;
+    margin-bottom: 1rem;
+    width: 120px;
+    height: 120px;
+  }
+  .card-details {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .card-price {
+    align-items: center;
+  }
+}
