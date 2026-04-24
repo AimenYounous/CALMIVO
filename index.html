@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calmivo | كالمیفو فيتامين B6</title>
+    <title>Calmivo | كالمیفو للراحة</title>
     <!-- Modern Typography: Cairo & Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,20 +23,27 @@
     <nav class="premium-nav">
       <div class="logo">CALMIVO<span>.</span></div>
       <div class="nav-links">
-        <a href="#discover">اكتشف</a>
+        <a href="#problem">لماذا نحن</a>
         <a href="#benefits">المنافع</a>
         <a href="#shop">المنتجات</a>
       </div>
-      <button class="btn-primary" id="buy-btn">اطلب الآن</button>
+      <button class="btn-primary" onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})">اطلب الآن</button>
     </nav>
 
-    <!-- Hero / Gallery Section -->
-    <main class="hero">
+    <!-- HERO -->
+    <main class="hero" id="hero">
       <div class="hero-content">
-        <h1 class="stagger-text">حيوية نقية، <br/><span class="dynamic-text">ترتقي بك.</span></h1>
-        <p class="stagger-text subtext">اكتشف التوليفة المثالية من فيتامين B6، المصممة خصيصاً لمنحك هدوءاً فائقاً وطاقة مركزة لمواجهة ضغوطات يومك.</p>
+        <h1 class="stagger-text">هل التوتر بدا <br/><span class="dynamic-text">كيسرق راحتك؟</span></h1>
+        <p class="stagger-text subtext">صعوبة في النوم… تفكير زائد… إرهاق رغم الراحة…<br/>Calmivo يساعدك تسترجع التوازن وتهدّئ أعصابك بشكل طبيعي 🌙</p>
         
-        <div class="controls stagger-text">
+        <ul class="hero-features stagger-text">
+          <li>✅ دعم الجهاز العصبي</li>
+          <li>✅ تحسين جودة النوم</li>
+          <li>✅ تقليل التوتر اليومي</li>
+          <li>✅ 30 كبسولة دعم يومي</li>
+        </ul>
+
+        <div class="controls stagger-text" style="margin: 2rem 0;">
           <button class="nav-control" id="prev-btn">
              <!-- Right arrow (prev in RTL) -->
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
@@ -46,6 +53,10 @@
             <!-- Left arrow (next in RTL) -->
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
           </button>
+        </div>
+
+        <div class="hero-cta stagger-text">
+          <button class="btn-primary main-cta" onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})">🛒 اطلب الآن والدفع عند الاستلام</button>
         </div>
       </div>
 
@@ -74,35 +85,119 @@
       </div>
     </main>
 
-    <!-- Video Story Section -->
-    <article class="video-story-section" id="discover">
-      <div class="video-content stagger-video-text">
-        <h2>اكتشف رحلة <span class="dynamic-text">التوازن الداخلي</span></h2>
-        <p>تركيبة متكاملة لدعم الجهاز العصبي والمساعدة على الاسترخاء، صممت بعناية لتحسين جودة يومك.</p>
-      </div>
-      <div class="video-container" id="video-container">
-        <video id="story-video" class="story-video" playsinline>
-          <source src="./83924fe8-a524-4c65-840c-27f6e35a284e.mp4" type="video/mp4" />
-        </video>
-        <div class="play-overlay" id="play-overlay">
-           <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+    <!-- PROBLEM SECTION -->
+    <section class="problem-section" id="problem">
+      <div class="container text-center">
+        <h2 class="section-title">أحياناً الجسم ما كيطلبش الدواء… <br/><span class="dynamic-text">كيطلب الهدوء.</span></h2>
+        <p class="section-subtitle">التوتر المستمر يقدر يأثر على:</p>
+        <div class="problem-grid">
+          <div class="problem-card">النوم</div>
+          <div class="problem-card">المزاج</div>
+          <div class="problem-card">التركيز</div>
+          <div class="problem-card">الطاقة اليومية</div>
         </div>
-        <button class="fullscreen-btn" id="fullscreen-btn" title="توسيع الشاشة">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
-        </button>
+        <p class="problem-conclusion">وهنا كيجي دور Calmivo.</p>
       </div>
-    </article>
+    </section>
 
-    <!-- Pricing / Shop Section -->
+    <!-- SOLUTION -->
+    <section class="solution-section">
+      <div class="container split-layout">
+        <div class="split-image">
+           <img src="./Copie de 4.jpeg" alt="Calmivo Solution" />
+        </div>
+        <div class="split-text">
+          <h2 class="section-title">لماذا <span class="dynamic-text">Calmivo</span> مختلف؟</h2>
+          <p class="section-subtitle">تركيبة مختارة لدعم:</p>
+          <ul class="solution-list">
+            <li>🌿 الأعصاب</li>
+            <li>🌙 النوم</li>
+            <li>🧠 التوازن الذهني</li>
+          </ul>
+          <p class="solution-bottom">ماشي مجرد مكمل…<br/>بل روتين يومي للراحة.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS BLOCK -->
+    <section class="benefits-section" id="benefits">
+      <div class="container text-center">
+        <h2 class="section-title">شنو ممكن تستافد مع Calmivo؟</h2>
+        <div class="benefits-grid">
+          <div class="benefit-item">✔️ استرخاء أكثر</div>
+          <div class="benefit-item">✔️ نوم أهدأ</div>
+          <div class="benefit-item">✔️ تقليل الضغط العصبي</div>
+          <div class="benefit-item">✔️ دعم التوازن النفسي</div>
+          <div class="benefit-item">✔️ بداية يوم بنشاط أحسن</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY IT WORKS -->
+    <section class="why-it-works-section">
+      <div class="container text-center">
+        <h2 class="section-title">تركيبة تخدم <span class="dynamic-text">من الداخل</span></h2>
+        <p class="section-subtitle">يدعم الجسم بعناصر معروفة بدورها في:</p>
+        <div class="work-blocks">
+          <div class="work-block">دعم الأعصاب</div>
+          <div class="work-block">تحسين الاسترخاء</div>
+          <div class="work-block">دعم النوم الطبيعي</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="comparison-section">
+      <div class="container split-layout alternate">
+         <div class="split-text">
+            <h2 class="section-title">Calmivo <span class="dynamic-text">مشي بحال أي منتج تهدئة</span></h2>
+            <ul class="comparison-list">
+              <li>✓ دعم يومي للأعصاب</li>
+              <li>✓ بدون نعاس ثقيل</li>
+              <li>✓ مناسب للروتين اليومي</li>
+              <li>✓ تركيبة متوازنة</li>
+            </ul>
+         </div>
+         <div class="split-image glass-box">
+             <div class="comparison-badge">
+                <span class="badge-text">الأفضل للروتين اليومي</span>
+             </div>
+         </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="social-proof-section">
+      <div class="container text-center">
+        <h2 class="section-title">تجارب العملاء 💜</h2>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="stars">⭐️⭐️⭐️⭐️⭐️</div>
+            <p>"أول مرة نحس بالنوم مريح"</p>
+          </div>
+          <div class="review-card">
+            <div class="stars">⭐️⭐️⭐️⭐️⭐️</div>
+            <p>"فرق كبير فالتوتر ديالي"</p>
+          </div>
+          <div class="review-card">
+            <div class="stars">⭐️⭐️⭐️⭐️⭐️</div>
+            <p>"وليت كنفيق أخف"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFER / SHOP -->
     <section class="pricing-section" id="shop">
       <div class="pricing-header stagger-shop">
-        <h2>اطلب الآن بخصومات خاصة 🇲🇦</h2>
-        <p>الدفع عند الاستلام والتوصيل مجاني لجميع مدن المغرب</p>
+        <h2>اختر العرض المناسب لك 🔥</h2>
+        <p>توصيل مجاني والدفع عند الاستلام لجميع مدن المغرب</p>
+        <div class="urgency-banner">⚠️ الكمية محدودة لهذا العرض.</div>
       </div>
       
       <div class="pricing-cards stagger-shop">
         <!-- Package 1 -->
-        <div class="card basic-card">
+        <div class="card basic-card" onclick="window.location.href='checkout.html?package=1'">
           <div class="card-image">
             <img src="./Copie de 1.jpeg" alt="1x Calmivo" />
           </div>
@@ -116,7 +211,7 @@
         </div>
 
         <!-- Package 2 -->
-        <div class="card highlight-card">
+        <div class="card highlight-card" onclick="window.location.href='checkout.html?package=2'">
           <div class="card-image">
             <img src="./Copie de 1.jpeg" alt="2x Calmivo" />
           </div>
@@ -132,7 +227,7 @@
         </div>
 
         <!-- Package 3 -->
-        <div class="card premium-card">
+        <div class="card premium-card" onclick="window.location.href='checkout.html?package=3'">
           <div class="card-image">
             <img src="./Copie de 1.jpeg" alt="3x Calmivo" />
           </div>
@@ -148,6 +243,41 @@
         </div>
       </div>
     </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="section-title text-center">أسئلة شائعة</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>واش طبيعي؟</h3>
+            <p>نعم، تركيبة داعمة للجهاز العصبي.</p>
+          </div>
+          <div class="faq-item">
+            <h3>شحال كيبان الفرق؟</h3>
+            <p>كيختلف من شخص لآخر، والاستعمال المنتظم مهم.</p>
+          </div>
+          <div class="faq-item">
+            <h3>كيفاش نطلب؟</h3>
+            <p>عمر الاستمارة وغادي يتم التواصل معك للتأكيد.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CLOSE -->
+    <section class="final-close-section" style="margin-bottom: 50px;">
+      <div class="container text-center glass-box">
+        <h2 class="section-title">الراحة ما خاصهاش تبقى مؤجلة.</h2>
+        <p class="section-subtitle">ابدأ اليوم مع Calmivo 🌙</p>
+        <button class="btn-primary cta-large" onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})">[اطلب الآن]</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 Calmivo. جميع الحقوق محفوظة.</p>
+    </footer>
 
     <script type="module" src="./src/main.js"></script>
   </body>
