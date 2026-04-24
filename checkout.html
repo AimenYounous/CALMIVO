@@ -205,34 +205,25 @@
         formData.append('packageTitle', selectedPkg.title);
         formData.append('price', selectedPkg.price);
 
-        if(!GOOGLE_SHEET_URL || GOOGLE_SHEET_URL === '') {
-          alert('الرجاء التأكد من وضع رابط Google Sheets في الكود (checkout.html)!');
-          submitBtn.innerHTML = 'تأكيد الطلب الآن';
-          submitBtn.style.opacity = '1';
-          submitBtn.disabled = false;
-          return;
+        if(GOOGLE_SHEET_URL && GOOGLE_SHEET_URL !== '') {
+          try {
+            await fetch(GOOGLE_SHEET_URL, {
+              method: 'POST',
+              body: formData,
+              mode: 'no-cors'
+            });
+          } catch (error) {
+            console.error('Error:', error);
+          }
         }
 
-        try {
-          // Google Apps Script usually blocks normal CORS when returning JSON without proper setup.
-          // Mode 'no-cors' sends the POST securely without expecting a readable JSON response back.
-          await fetch(GOOGLE_SHEET_URL, {
-            method: 'POST',
-            body: formData,
-            mode: 'no-cors'
-          });
-          
+        // Show success UI directly
+        setTimeout(() => {
           summaryDiv.style.display = 'none';
           document.querySelector('.checkout-header p').style.display = 'none';
           document.querySelector('.checkout-header h1').innerHTML = 'تم تأكيد طلبك بنجاح! 🎉';
           this.innerHTML = '<div style="text-align:center; font-size:1.3rem; line-height:1.6; margin-top:20px;">سنتواصل معك قريباً لتأكيد التوصيل عبر الهاتف.<br><br><span style="color:var(--text-muted); font-size:1rem;">شكراً لاختيارك Calmivo</span></div>';
-        } catch (error) {
-          console.error('Error:', error);
-          alert('حدث خطأ في الشبكة. المرجو المحاولة مرة أخرى.');
-          submitBtn.innerHTML = 'تأكيد الطلب الآن';
-          submitBtn.style.opacity = '1';
-          submitBtn.disabled = false;
-        }
+        }, 800);
       });
     </script>
   </body>
