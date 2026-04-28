@@ -2,33 +2,55 @@
 <html lang="ar" dir="rtl">
   <head>
     <!-- Meta Pixel Code -->
-      <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '966805465905255');
-      fbq('track', 'PageView');
-      </script>
-      <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=966805465905255&ev=PageView&noscript=1"
-      /></noscript>
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "966805465905255");
+      fbq("track", "PageView");
+    </script>
     <!-- End Meta Pixel Code -->
-     
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calmivo | كالمیفو للراحة</title>
     <!-- Modern Typography: Cairo & Outfit -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&family=Outfit:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=966805465905255&ev=PageView&noscript=1"
+    /></noscript>
     <!-- 3D Animated Background Elements for Hero -->
     <div class="animated-bg-container">
       <div class="ambient-glow" id="ambient-glow"></div>
@@ -45,15 +67,25 @@
         <a href="#benefits">المنافع</a>
         <a href="#shop">المنتجات</a>
       </div>
-      <button class="btn-primary" onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})">اطلب الآن</button>
+      <button
+        class="btn-primary"
+        onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})"
+      >
+        اطلب الآن
+      </button>
     </nav>
 
     <!-- HERO -->
     <main class="hero" id="hero">
       <div class="hero-content">
-        <h1 class="stagger-text">هل التوتر بدا <br/><span class="dynamic-text">كيسرق راحتك؟</span></h1>
-        <p class="stagger-text subtext">صعوبة في النوم… تفكير زائد… إرهاق رغم الراحة…<br/>Calmivo يساعدك تسترجع التوازن وتهدّئ أعصابك بشكل طبيعي 🌙</p>
-        
+        <h1 class="stagger-text">
+          هل التوتر بدا <br /><span class="dynamic-text">كيسرق راحتك؟</span>
+        </h1>
+        <p class="stagger-text subtext">
+          صعوبة في النوم… تفكير زائد… إرهاق رغم الراحة…<br />Calmivo يساعدك
+          تسترجع التوازن وتهدّئ أعصابك بشكل طبيعي 🌙
+        </p>
+
         <ul class="hero-features stagger-text">
           <li>✅ دعم الجهاز العصبي</li>
           <li>✅ تحسين جودة النوم</li>
@@ -61,20 +93,43 @@
           <li>✅ 30 كبسولة دعم يومي</li>
         </ul>
 
-        <div class="controls stagger-text" style="margin: 2rem 0;">
+        <div class="controls stagger-text" style="margin: 2rem 0">
           <button class="nav-control" id="prev-btn">
-             <!-- Right arrow (prev in RTL) -->
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            <!-- Right arrow (prev in RTL) -->
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
           </button>
           <span class="indicator">01 / 06</span>
           <button class="nav-control" id="next-btn">
             <!-- Left arrow (next in RTL) -->
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M9 18l6-6-6-6" />
+            </svg>
           </button>
         </div>
 
         <div class="hero-cta stagger-text">
-          <button class="btn-primary main-cta" onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})">🛒 اطلب الآن والدفع عند الاستلام</button>
+          <button
+            class="btn-primary main-cta"
+            onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})"
+          >
+            🛒 اطلب الآن والدفع عند الاستلام
+          </button>
         </div>
       </div>
 
@@ -82,22 +137,46 @@
         <!-- The images will be injected and manipulated via JS -->
         <div class="carousel" id="carousel">
           <div class="slide active">
-            <img crossorigin="anonymous" src="./Copie de 1.jpeg" alt="Calmivo Product 1" />
+            <img
+              crossorigin="anonymous"
+              src="./Copie de 1.jpeg"
+              alt="Calmivo Product 1"
+            />
           </div>
           <div class="slide next">
-            <img crossorigin="anonymous" src="./Copie de 2.jpeg" alt="Calmivo Product 2" />
+            <img
+              crossorigin="anonymous"
+              src="./Copie de 2.jpeg"
+              alt="Calmivo Product 2"
+            />
           </div>
           <div class="slide">
-            <img crossorigin="anonymous" src="./Copie de 3.jpeg" alt="Calmivo Product 3" />
+            <img
+              crossorigin="anonymous"
+              src="./Copie de 3.jpeg"
+              alt="Calmivo Product 3"
+            />
           </div>
           <div class="slide">
-            <img crossorigin="anonymous" src="./Copie de 4.jpeg" alt="Calmivo Product 4" />
+            <img
+              crossorigin="anonymous"
+              src="./Copie de 4.jpeg"
+              alt="Calmivo Product 4"
+            />
           </div>
           <div class="slide">
-            <img crossorigin="anonymous" src="./Copie de 5.jpeg" alt="Calmivo Product 5" />
+            <img
+              crossorigin="anonymous"
+              src="./Copie de 5.jpeg"
+              alt="Calmivo Product 5"
+            />
           </div>
           <div class="slide prev">
-            <img crossorigin="anonymous" src="./Copie de 6.jpeg" alt="Calmivo Product 6" />
+            <img
+              crossorigin="anonymous"
+              src="./Copie de 6.jpeg"
+              alt="Calmivo Product 6"
+            />
           </div>
         </div>
       </div>
@@ -106,7 +185,11 @@
     <!-- PROBLEM SECTION -->
     <section class="problem-section" id="problem">
       <div class="container text-center">
-        <h2 class="section-title">أحياناً الجسم ما كيطلبش الدواء… <br/><span class="dynamic-text">كيطلب الهدوء.</span></h2>
+        <h2 class="section-title">
+          أحياناً الجسم ما كيطلبش الدواء… <br /><span class="dynamic-text"
+            >كيطلب الهدوء.</span
+          >
+        </h2>
         <p class="section-subtitle">التوتر المستمر يقدر يأثر على:</p>
         <div class="problem-grid">
           <div class="problem-card">النوم</div>
@@ -122,17 +205,21 @@
     <section class="solution-section">
       <div class="container split-layout">
         <div class="split-image">
-           <img src="./Copie de 4.jpeg" alt="Calmivo Solution" />
+          <img src="./Copie de 4.jpeg" alt="Calmivo Solution" />
         </div>
         <div class="split-text">
-          <h2 class="section-title">لماذا <span class="dynamic-text">Calmivo</span> مختلف؟</h2>
+          <h2 class="section-title">
+            لماذا <span class="dynamic-text">Calmivo</span> مختلف؟
+          </h2>
           <p class="section-subtitle">تركيبة مختارة لدعم:</p>
           <ul class="solution-list">
             <li>🌿 الأعصاب</li>
             <li>🌙 النوم</li>
             <li>🧠 التوازن الذهني</li>
           </ul>
-          <p class="solution-bottom">ماشي مجرد مكمل…<br/>بل روتين يومي للراحة.</p>
+          <p class="solution-bottom">
+            ماشي مجرد مكمل…<br />بل روتين يومي للراحة.
+          </p>
         </div>
       </div>
     </section>
@@ -154,11 +241,17 @@
     <!-- WHY IT WORKS -->
     <section class="why-it-works-section">
       <div class="container text-center">
-        <h2 class="section-title">تركيبة تخدم <span class="dynamic-text">من الداخل</span></h2>
+        <h2 class="section-title">
+          تركيبة تخدم <span class="dynamic-text">من الداخل</span>
+        </h2>
         <p class="section-subtitle">يدعم الجسم بعناصر معروفة بدورها في:</p>
-        
+
         <div class="why-works-image-container">
-          <img src="./image1.png" alt="How Calmivo Works" class="works-main-image" />
+          <img
+            src="./image1.png"
+            alt="How Calmivo Works"
+            class="works-main-image"
+          />
         </div>
 
         <div class="work-blocks">
@@ -172,43 +265,55 @@
     <!-- COMPARISON 1 - Routine -->
     <section class="comparison-section" id="routine">
       <div class="container split-layout alternate">
-         <div class="split-text">
-            <h2 class="section-title">Calmivo <span class="dynamic-text">مشي بحال أي منتج تهدئة</span></h2>
-            <ul class="comparison-list">
-               <li>✓ دعم يومي للأعصاب</li>
-               <li>✓ بدون نعاس ثقيل</li>
-               <li>✓ مناسب للروتين اليومي</li>
-               <li>✓ تركيبة متوازنة</li>
-            </ul>
-         </div>
-          <div class="split-image glass-box">
-             <img src="./image2.png" alt="Calmivo Day and Night" class="comparison-main-image" />
-             <div class="comparison-info-bar">
-                <span class="info-text">الأفضل للروتين اليومي</span>
-             </div>
+        <div class="split-text">
+          <h2 class="section-title">
+            Calmivo <span class="dynamic-text">مشي بحال أي منتج تهدئة</span>
+          </h2>
+          <ul class="comparison-list">
+            <li>✓ دعم يومي للأعصاب</li>
+            <li>✓ بدون نعاس ثقيل</li>
+            <li>✓ مناسب للروتين اليومي</li>
+            <li>✓ تركيبة متوازنة</li>
+          </ul>
+        </div>
+        <div class="split-image glass-box">
+          <img
+            src="./image2.png"
+            alt="Calmivo Day and Night"
+            class="comparison-main-image"
+          />
+          <div class="comparison-info-bar">
+            <span class="info-text">الأفضل للروتين اليومي</span>
           </div>
+        </div>
       </div>
     </section>
 
     <!-- COMPARISON 2 - Internal Relief -->
     <section class="comparison-section" id="relief">
       <div class="container split-layout">
-          <div class="split-image glass-box">
-             <img src="./image3.png" alt="Calmivo Internal Relief" class="comparison-main-image" />
-             <div class="comparison-info-bar">
-                <span class="info-text">ارتياح يبدأ من الداخل</span>
-             </div>
+        <div class="split-image glass-box">
+          <img
+            src="./image3.png"
+            alt="Calmivo Internal Relief"
+            class="comparison-main-image"
+          />
+          <div class="comparison-info-bar">
+            <span class="info-text">ارتياح يبدأ من الداخل</span>
           </div>
-          <div class="split-text">
-            <h2 class="section-title">ارتياح <span class="dynamic-text">يبدأ من داخلك</span></h2>
-            <p class="section-subtitle">Calmivo كيعاونك تحس بالراحة من العمق:</p>
-            <ul class="comparison-list">
-               <li>✓ نوم أعمق وأكثر جودة</li>
-               <li>✓ تخفيف التوتر والقلق</li>
-               <li>✓ تحسين المزاج العام</li>
-               <li>✓ طاقة ونشاط طوال اليوم</li>
-            </ul>
-          </div>
+        </div>
+        <div class="split-text">
+          <h2 class="section-title">
+            ارتياح <span class="dynamic-text">يبدأ من داخلك</span>
+          </h2>
+          <p class="section-subtitle">Calmivo كيعاونك تحس بالراحة من العمق:</p>
+          <ul class="comparison-list">
+            <li>✓ نوم أعمق وأكثر جودة</li>
+            <li>✓ تخفيف التوتر والقلق</li>
+            <li>✓ تحسين المزاج العام</li>
+            <li>✓ طاقة ونشاط طوال اليوم</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -240,10 +345,13 @@
         <p>توصيل مجاني والدفع عند الاستلام لجميع مدن المغرب</p>
         <div class="urgency-banner">⚠️ الكمية محدودة لهذا العرض.</div>
       </div>
-      
+
       <div class="pricing-cards stagger-shop">
         <!-- Package 1 -->
-        <div class="card basic-card" onclick="window.location.href='checkout.html?package=1'">
+        <div
+          class="card basic-card"
+          onclick="window.location.href='checkout.html?package=1'"
+        >
           <div class="card-image">
             <img src="./Copie de 1.jpeg" alt="1x Calmivo" />
           </div>
@@ -257,7 +365,10 @@
         </div>
 
         <!-- Package 2 -->
-        <div class="card highlight-card" onclick="window.location.href='checkout.html?package=2'">
+        <div
+          class="card highlight-card"
+          onclick="window.location.href='checkout.html?package=2'"
+        >
           <div class="card-image">
             <img src="./Copie de 1.jpeg" alt="2x Calmivo" />
           </div>
@@ -273,7 +384,10 @@
         </div>
 
         <!-- Package 3 -->
-        <div class="card premium-card" onclick="window.location.href='checkout.html?package=3'">
+        <div
+          class="card premium-card"
+          onclick="window.location.href='checkout.html?package=3'"
+        >
           <div class="card-image">
             <img src="./Copie de 1.jpeg" alt="3x Calmivo" />
           </div>
@@ -283,8 +397,8 @@
             <span class="badge best-seller">الأكثر طلباً</span>
           </div>
           <div class="card-price">
-             <span class="old-price">450.00 dh</span>
-             <span class="price">319.00 dh</span>
+            <span class="old-price">450.00 dh</span>
+            <span class="price">319.00 dh</span>
           </div>
         </div>
       </div>
@@ -312,11 +426,16 @@
     </section>
 
     <!-- FINAL CLOSE -->
-    <section class="final-close-section" style="margin-bottom: 50px;">
+    <section class="final-close-section" style="margin-bottom: 50px">
       <div class="container text-center glass-box">
         <h2 class="section-title">الراحة ما خاصهاش تبقى مؤجلة.</h2>
         <p class="section-subtitle">ابدأ اليوم مع Calmivo 🌙</p>
-        <button class="btn-primary cta-large" onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})">[اطلب الآن]</button>
+        <button
+          class="btn-primary cta-large"
+          onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})"
+        >
+          [اطلب الآن]
+        </button>
       </div>
     </section>
 
