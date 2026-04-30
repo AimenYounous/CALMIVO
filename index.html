@@ -69,7 +69,7 @@
       </div>
       <button
         class="btn-primary"
-        onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})"
+        onclick="window.location.href='checkout.html'"
       >
         اطلب الآن
       </button>
@@ -126,7 +126,7 @@
         <div class="hero-cta stagger-text">
           <button
             class="btn-primary main-cta"
-            onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})"
+            onclick="window.location.href='checkout.html'"
           >
             🛒 اطلب الآن والدفع عند الاستلام
           </button>
@@ -345,109 +345,10 @@
         <p>توصيل مجاني والدفع عند الاستلام لجميع مدن المغرب</p>
       </div>
 
-      <!-- The new Buy Now button that will reveal the checkout form -->
       <div id="buy-now-container" class="stagger-shop" style="text-align: center; margin-bottom: 2rem; width: 100%;">
-        <button id="buy-now-btn" class="btn-primary" style="font-size: 1.8rem; padding: 1.2rem 4rem; background-color: #106b50; color: white; border: none; font-weight: 800; border-radius: 12px; box-shadow: 0 10px 25px rgba(16, 107, 80, 0.4); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;">
-          اشتري الان
+        <button onclick="window.location.href='checkout.html'" class="btn-primary" style="font-size: 1.8rem; padding: 1.2rem 4rem; background-color: #106b50; color: white; border: none; font-weight: 800; border-radius: 12px; box-shadow: 0 10px 25px rgba(16, 107, 80, 0.4); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;">
+          اطلب الان
         </button>
-      </div>
-
-      <!-- The checkout form container, initially hidden -->
-      <div id="checkout-container" class="checkout-wrapper" style="display: none; width: 100%; max-width: 500px; margin: 0 auto; background: white; border-radius: 15px; padding: 1.5rem; color: #333; box-shadow: 0 20px 50px rgba(0,0,0,0.5); text-align: right;">
-        <div class="checkout-header-img" style="text-align: center; margin-bottom: 1.5rem; border-bottom: 2px solid #f3f4f6; padding-bottom: 1rem;">
-          <h3 style="color: #106b50; font-weight: 800; font-size: 1.2rem; line-height: 1.6;">
-            🇲🇦 اطلب بالأسفل مع الدفع عند الاستلام <br> + توصيل مجاني 🇲🇦
-          </h3>
-        </div>
-
-        <div class="product-selection">
-          <!-- Option 1 -->
-          <label class="product-option selected">
-            <input type="radio" name="package" value="1" checked style="display: none;">
-            <div class="option-content">
-              <img src="./Copie de 1.jpeg" alt="1x Calmivo">
-              <div class="option-details">
-                <h4>1x Calmivo Classic | لشهر واحد</h4>
-                <div class="option-price-mobile">219.00 dh</div>
-              </div>
-              <div class="option-price">
-                <span class="price">219.00 dh</span>
-              </div>
-            </div>
-          </label>
-
-          <!-- Option 2 -->
-          <label class="product-option">
-            <input type="radio" name="package" value="2" style="display: none;">
-            <div class="option-content">
-              <img src="./Copie de 1.jpeg" alt="2x Calmivo">
-              <div class="option-details">
-                <h4>2x Calmivo Classic | لشهرين</h4>
-                <span class="badge" style="background: #106b50; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-top: 5px; display: inline-block;">توفير 35%</span>
-                <div class="option-price-mobile">
-                   <span class="old-price" style="text-decoration: line-through; color: #999; font-size: 0.9rem; margin-left: 5px;">350.00 dh</span>
-                   269.00 dh
-                </div>
-              </div>
-              <div class="option-price">
-                <span class="old-price" style="text-decoration: line-through; color: #999; font-size: 0.9rem; display: block;">350.00 dh</span>
-                <span class="price">269.00 dh</span>
-              </div>
-            </div>
-          </label>
-
-          <!-- Option 3 -->
-          <label class="product-option">
-            <input type="radio" name="package" value="3" style="display: none;">
-            <div class="option-content">
-              <img src="./Copie de 1.jpeg" alt="3x Calmivo">
-              <div class="option-details">
-                <h4>3x Calmivo Classic | لثلاثة أشهر</h4>
-                <span class="badge" style="background: #106b50; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-top: 5px; display: inline-block;">الأكثر طلباً</span>
-                <div class="option-price-mobile">
-                   <span class="old-price" style="text-decoration: line-through; color: #999; font-size: 0.9rem; margin-left: 5px;">450.00 dh</span>
-                   319.00 dh
-                </div>
-              </div>
-              <div class="option-price">
-                <span class="old-price" style="text-decoration: line-through; color: #999; font-size: 0.9rem; display: block;">450.00 dh</span>
-                <span class="price">319.00 dh</span>
-              </div>
-            </div>
-          </label>
-        </div>
-
-        <form id="checkout-form-main" class="checkout-form-inline" style="margin-top: 2rem;">
-          <div class="form-group" style="margin-bottom: 1rem;">
-            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #333;">الإسم الكامل <span style="color: red;">*</span></label>
-            <div style="display: flex; border: 1px solid #ccc; border-radius: 8px; overflow: hidden;">
-              <span style="background: #f3f4f6; padding: 10px 15px; color: #666; border-left: 1px solid #ccc;">👤</span>
-              <input type="text" id="name" required placeholder="Nom et prénom" style="flex: 1; border: none; padding: 10px; outline: none; background: white; color: #333; font-family: 'Cairo', sans-serif;">
-            </div>
-          </div>
-
-          <div class="form-group" style="margin-bottom: 1rem;">
-            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #333;">رقم الهاتف <span style="color: red;">*</span></label>
-            <div style="display: flex; border: 1px solid #ccc; border-radius: 8px; overflow: hidden;">
-              <span style="background: #f3f4f6; padding: 10px 15px; color: #666; border-left: 1px solid #ccc;">📞</span>
-              <input type="tel" id="phone" required placeholder="Numéro de téléphone" dir="ltr" style="flex: 1; border: none; padding: 10px; outline: none; text-align: right; background: white; color: #333; font-family: 'Cairo', sans-serif;">
-            </div>
-          </div>
-
-          <div class="form-group" style="margin-bottom: 1.5rem;">
-            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: #333;">المدينة <span style="color: red;">*</span></label>
-            <div style="display: flex; border: 1px solid #ccc; border-radius: 8px; overflow: hidden;">
-              <span style="background: #f3f4f6; padding: 10px 15px; color: #666; border-left: 1px solid #ccc;">📍</span>
-              <input type="text" id="city" required placeholder="Ville" style="flex: 1; border: none; padding: 10px; outline: none; background: white; color: #333; font-family: 'Cairo', sans-serif;">
-            </div>
-          </div>
-
-          <button type="submit" id="submit-order-btn" class="btn-primary" style="width: 100%; padding: 1rem; font-size: 1.3rem; background-color: #106b50; color: white; border: none; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 10px rgba(16, 107, 80, 0.3); transition: opacity 0.3s ease; cursor: pointer; font-family: 'Cairo', sans-serif;">تأكيد الطلب الآن</button>
-          
-          <div id="success-msg" style="display: none; text-align: center; color: #106b50; font-weight: bold; margin-top: 1rem; font-size: 1.2rem;">
-            تم تأكيد طلبك بنجاح! 🎉<br>سنتواصل معك قريباً.
-          </div>
-        </form>
       </div>
     </section>
 
@@ -479,7 +380,7 @@
         <p class="section-subtitle">ابدأ اليوم مع Calmivo 🌙</p>
         <button
           class="btn-primary cta-large"
-          onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})"
+          onclick="window.location.href='checkout.html'"
         >
           [اطلب الآن]
         </button>

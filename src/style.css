@@ -985,16 +985,17 @@ section {
 .product-option {
   display: flex;
   cursor: pointer;
-  border: 1px solid #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  background: white;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
   transition: all 0.3s ease;
   overflow: hidden;
 }
 
 .product-option.selected {
-  border: 2px solid #106b50;
-  background: #dcfce7;
+  border: 2px solid #a855f7;
+  background: rgba(168, 85, 247, 0.15);
 }
 
 .option-content {
@@ -1009,7 +1010,7 @@ section {
   height: 60px;
   object-fit: contain;
   border-radius: 5px;
-  background: white;
+  background: rgba(255, 255, 255, 0.05);
   margin-left: 15px; /* right side in RTL */
 }
 
@@ -1021,7 +1022,7 @@ section {
 .option-details h4 {
   font-size: 1.1rem;
   margin-bottom: 0;
-  color: #333;
+  color: white;
   font-weight: 700;
 }
 
@@ -1037,7 +1038,7 @@ section {
 .option-price .price {
   font-size: 1.2rem;
   font-weight: 800;
-  color: #111;
+  color: white;
 }
 
 .option-price-mobile {
@@ -1051,7 +1052,7 @@ section {
   .option-price-mobile {
     display: block;
     font-weight: 800;
-    color: #111;
+    color: white;
     margin-top: 5px;
   }
 }
